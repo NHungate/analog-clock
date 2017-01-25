@@ -1,0 +1,99 @@
+html {
+    background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+    background-size: cover;
+    background-position: center;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock {
+    background: rgba(255, 255, 255, 0.3);
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid #fff;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0px 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px #000,
+        0 0 10px rgba(0, 0, 0, 0.2)
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.clock-center {
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+}
+
+.minutes {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-7px) translateX(-10px);
+}
+
+.second-hand:after,
+.min-hand:after,
+.hour-hand:after {
+    content: '';
+    width: 4.24264068712px;
+    height: 4.24264068712px;
+    position: absolute;
+    left: -2.121320344px;
+    top: 1.06066px;
+    background: inherit;
+    transform: rotate(45deg);
+}
+
+.seconds {
+    width: 14px;
+    height: 14px;
+    background-color: #a00;
+    transform: translateY(-4px) translateX(-7px);
+}
+
+.pin {
+    width: 4px;
+    height: 4px;
+    transform: translateY(1px) translateX(-2px);
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: .05s;
+    transition-timing-function: cubic-bezier(0.05, 2.8, 0.7, 1.15);
+}
+
+.hour-hand {
+    width: 40%;
+    right: 50%;
+}
+.second-hand {
+    background: #a00;
+}
